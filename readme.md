@@ -1,6 +1,6 @@
 # Email microservice
 
-This service receives `POST` requests with content of an email, and then dispatch this email to the receiver. Once the email is sent (or at least attempted to be), the information is saved on a Postgres DB for later consume. So for example if an email gets an error for any reason, it is possible to re-send it latter.
+This service dispatches emails. Once the email is sent (or at least attempted to be), the information is saved on a Postgres DB for later consume. So for example if an email gets an error for any reason, it is possible to re-send it latter.
 
 ## Asynchronous queues
 
