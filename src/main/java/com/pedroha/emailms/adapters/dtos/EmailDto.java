@@ -1,4 +1,4 @@
-package com.pedroha.emailms.dtos;
+package com.pedroha.emailms.adapters.dtos;
 
 import lombok.Data;
 
@@ -10,9 +10,11 @@ public class EmailDto {
 
     @NotBlank
     private String ownerRef;
-    @NotBlank @Email
+    @NotBlank
+    @Email
     private String emailFrom;
-    @NotBlank @Email
+    @NotBlank
+    @Email
     private String emailTo;
     @NotBlank
     private String subject;
