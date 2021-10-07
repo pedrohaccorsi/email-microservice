@@ -1,6 +1,6 @@
-package com.pedroha.emailms.models;
+package com.pedroha.emailms.adapters.outbound.persistence.entities;
 
-import com.pedroha.emailms.enums.StatusEmailEnum;
+import com.pedroha.emailms.appCore.domain.enums.StatusEmailEnum;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -11,12 +11,11 @@ import java.util.UUID;
 @Data
 @Entity
 @Table(name = "TB_EMAIL")
-public class EmailModel implements Serializable {
+public class EmailEntity implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column(name="id")
     private UUID emailId;
     private String ownerRef;
     private String emailFrom;
@@ -26,4 +25,5 @@ public class EmailModel implements Serializable {
     private String text;
     private LocalDateTime sendDateEmail;
     private StatusEmailEnum statusEmail;
+
 }
