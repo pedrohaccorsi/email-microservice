@@ -34,4 +34,4 @@ build/
 
 ### Sensitive info ###
 .env
-*.application.properties
+*application.properties
