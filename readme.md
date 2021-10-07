@@ -2,6 +2,8 @@
 
 This service dispatches emails. Once the email is sent (or at least attempted to be), the information is saved on a Postgres DB for later consume. So for example if an email gets an error for any reason, it is possible to re-send it latter.
 
+It follows the hexagonal architecture, where the application core is completely isolated from the "outside world", leaving `ports` opened for `adapters` to communicate. Both `inbound` (endpoints, queue consumers) and `outbound` (email sending, database interaction) communication are being used.
+
 ## Asynchronous queues
 
 This service has a consumer to a managed RabbitMQ queue called `email-ms`. This queue can receive messages from other services, which will be consumed automatically by the email service and send the email.

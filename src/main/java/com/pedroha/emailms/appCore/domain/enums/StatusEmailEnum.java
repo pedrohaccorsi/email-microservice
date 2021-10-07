@@ -1,4 +1,4 @@
-package com.pedroha.emailms.enums;
+package com.pedroha.emailms.appCore.domain.enums;
 
 public enum StatusEmailEnum {
     PROCESSING,
